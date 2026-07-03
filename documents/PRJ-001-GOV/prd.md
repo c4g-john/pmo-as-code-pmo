@@ -18,7 +18,7 @@ to adopters, applied to ourselves.
 - **GOV-PR-001** (traces: GOV-BR-001): The documents repository shall hold one folder per project with the full lean-startup document set, and audit plus consistency shall be required status checks on every pull request.
 - **GOV-PR-002** (traces: GOV-BR-002): The status dashboard shall deploy to GitHub Pages on every push to main, with a portfolio index and one page per project.
 - **GOV-PR-003** (traces: GOV-BR-001): The advisory alignment layer shall run with the key passed only when documents change, with the grading cache persisted between runs.
-- **GOV-PR-004** (traces: GOV-BR-003): Each project shall be bridged to its component code repository, scaffolding Features and Stories from approved user stories.
+- **GOV-PR-004** (traces: GOV-BR-003): Each project shall be bridged to its component code repository across the full lifecycle: Features and Stories scaffolded from approved user stories, mirrored to a portfolio board with their document ids, Features closing when their last story completes, and issues outside documented scope flagged.
 - **GOV-PR-005** (traces: GOV-BR-001): The project registry shall be regenerated and checked for drift as a blocking gate.
 - **GOV-PR-006** (traces: GOV-BR-004): Gate workflows shall complete in under 5 minutes median, measured over the trailing month of pull requests.
 
@@ -30,6 +30,8 @@ to adopters, applied to ourselves.
 - **GOV-AC-004** (verifies: GOV-PR-004): Given an approved user story in any project, when the bridge scaffold runs, then a Story sub-issue exists in that project's code repository under its Feature.
 - **GOV-AC-005** (verifies: GOV-PR-005): Given a project anchor edited without regenerating the registry, when consistency runs, then the check fails.
 - **GOV-AC-006** (verifies: GOV-PR-006): Given the trailing month of pull requests, when gate durations are read from the Actions history, then the median is under 5 minutes.
+- **GOV-AC-007** (verifies: GOV-PR-004): Given scaffolded issues, when the portfolio board is inspected, then every Feature and Story appears with its document id and project fields set.
+- **GOV-AC-008** (verifies: GOV-PR-004): Given a Feature whose last open story closes, when close-out runs, then the Feature closes; and given an issue created outside documented scope, when reconciliation runs, then it is flagged within minutes.
 
 ## Out of Scope
 
