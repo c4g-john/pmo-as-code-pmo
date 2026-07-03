@@ -17,7 +17,7 @@ exposed the missing operations kind.
 ## Product Requirements
 
 - **ENG-PR-001** (traces: ENG-BR-003): Bridge commands shall accept a project filter and a per-project repository mapping, so one documents repository can scaffold each project into its own code repository.
-- **ENG-PR-002** (traces: ENG-BR-004): Risk items shall carry a disposition (open, mitigated, accepted, closed); only open risks shall drive the derived RAG, and the status-page risk table shall show the disposition of every risk.
+- **ENG-PR-002** (traces: ENG-BR-005): Risk items shall carry a disposition (open, mitigated, accepted, closed); only open risks shall drive the derived RAG, and the status-page risk table shall show the disposition of every risk.
 - **ENG-PR-003** (traces: ENG-BR-004): An operations document kind and profile shall exist, with a service catalog, service-level objectives, and a mandatory review-by date; a stale review shall turn the derived status amber.
 - **ENG-PR-004** (traces: ENG-BR-001): The public CLI surface shall be documented, and a stability policy shall define what 1.x guarantees and how deprecations are announced.
 - **ENG-PR-005** (traces: ENG-BR-002): Continuous integration shall enforce a coverage floor of 85% and keep the full platform matrix green.

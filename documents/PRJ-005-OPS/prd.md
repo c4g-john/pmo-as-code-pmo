@@ -17,9 +17,9 @@ operations document kind ships and this project migrates to it.
 - **OPS-PR-001** (traces: OPS-BR-001): A dependency triage service shall cover all eight repositories, with each Dependabot pull request merged, or closed with a stated reason, within 14 days of opening.
 - **OPS-PR-002** (traces: OPS-BR-002): A release service shall ship confirmed defect fixes to PyPI, the Homebrew tap, and the action tags within 7 days, following the release runbook.
 - **OPS-PR-003** (traces: OPS-BR-003): A security service shall triage GitHub advisories within 48 hours and keep the CodeQL dashboard clean or dispositioned across the ecosystem.
-- **OPS-PR-004** (traces: OPS-BR-001): A credential and domain lifecycle inventory shall list every expiring asset (domain, tokens, API keys, Pages certificates) with renewal dates and runbook steps.
+- **OPS-PR-004** (traces: OPS-BR-005): A credential and domain lifecycle inventory shall list every expiring asset (domain, tokens, API keys, Pages certificates) with renewal dates and runbook steps.
 - **OPS-PR-005** (traces: OPS-BR-004): A monthly operations status report shall record service-level attainment, keep-the-lights-on effort against the 20% cap, and period spend against budget.
-- **OPS-PR-006** (traces: OPS-BR-002): Known transient CI failure patterns (PyPI propagation lag, Pages deployment flakes) shall have runbook entries with detection and response steps.
+- **OPS-PR-006** (traces: OPS-BR-005): Known transient CI failure patterns (PyPI propagation lag, Pages deployment flakes) shall have runbook entries with detection and response steps.
 
 ## Acceptance Criteria
 
