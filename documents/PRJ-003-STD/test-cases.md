@@ -19,4 +19,4 @@ deeper test bed and is not duplicated here.
 - **STD-TC-003** (tests: STD-AC-003): Steps: author an operations document using only the specification text, then run the reference validator. Expected: passes without corrections.
 - **STD-TC-004** (tests: STD-AC-004): Steps: count conformance cases and run the suite against the reference implementation. Expected: at least 80 cases, all passing.
 - **STD-TC-005** (tests: STD-AC-005): Steps: take three historical changes (one breaking, one additive, one editorial) and classify each with the versioning policy. Expected: unambiguous classification matching their actual version bumps.
-- **STD-TC-006** (tests: STD-AC-006): Steps: patch the engine to emit a divergent status derivation on a conformance fixture and run CI. Expected: the conformance job fails.
+- **STD-TC-006** (tests: STD-AC-006): Steps: patch the engine to emit a divergent status derivation on a conformance fixture and run CI; separately, propose a behavior change pull request with no specification change and read the review outcome. Expected: the conformance job fails the first, and the spec-first policy is cited blocking the second.
