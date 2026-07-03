@@ -5,6 +5,7 @@ code: ADO
 name: Launch and adoption
 sponsor: John Tanner
 status: active
+repo: c4g-john/pmo-as-code
 profile: lean-startup
 ---
 

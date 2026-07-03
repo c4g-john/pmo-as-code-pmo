@@ -1,0 +1,38 @@
+name: bridge scaffold (GOV + OPS)
+
+# Documents -> issues for the projects mapped to this repository (GOV and
+# OPS share it; the bridge reconciles them as a union). Other projects
+# scaffold from workflows in their own code repositories.
+on:
+  push:
+    branches: [main]
+    paths: ["documents/**"]
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+      - run: pip install "docassert==$(head -n1 .docassert-version)"
+      - name: Scaffold GOV and OPS into this repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          docassert bridge scaffold \
+            --repo "$GITHUB_REPOSITORY" \
+            --project PRJ-001-GOV \
+            --docs-url "https://github.com/$GITHUB_REPOSITORY/blob/main"
+          docassert bridge scaffold \
+            --repo "$GITHUB_REPOSITORY" \
+            --project PRJ-005-OPS \
+            --docs-url "https://github.com/$GITHUB_REPOSITORY/blob/main"

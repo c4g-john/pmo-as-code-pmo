@@ -5,6 +5,7 @@ code: GOV
 name: Self-governance
 sponsor: John Tanner
 status: active
+repo: c4g-john/pmo-as-code-pmo
 profile: lean-startup
 ---
 

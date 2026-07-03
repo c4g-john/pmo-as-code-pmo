@@ -5,6 +5,7 @@ code: STD
 name: Standard 1.0
 sponsor: John Tanner
 status: active
+repo: c4g-john/pmo-as-code-spec
 profile: lean-startup
 ---
 
