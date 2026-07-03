@@ -4,7 +4,7 @@ id: STD-brd
 project: PRJ-003-STD
 title: Standard 1.0 — Business Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Purpose

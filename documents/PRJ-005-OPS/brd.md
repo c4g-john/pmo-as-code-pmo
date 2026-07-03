@@ -4,7 +4,7 @@ id: OPS-brd
 project: PRJ-005-OPS
 title: Portfolio operations 2026-H2 — Business Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Purpose

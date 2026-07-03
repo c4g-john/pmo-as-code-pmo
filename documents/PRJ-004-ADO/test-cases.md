@@ -4,7 +4,7 @@ id: ADO-test-cases
 project: PRJ-004-ADO
 title: Launch and adoption — Test Cases
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

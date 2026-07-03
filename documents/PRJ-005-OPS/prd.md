@@ -4,7 +4,7 @@ id: OPS-prd
 project: PRJ-005-OPS
 title: Portfolio operations 2026-H2 — Product Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

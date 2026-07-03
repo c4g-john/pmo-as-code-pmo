@@ -4,7 +4,7 @@ id: GOV-brd
 project: PRJ-001-GOV
 title: Self-governance — Business Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Purpose

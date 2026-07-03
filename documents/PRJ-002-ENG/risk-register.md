@@ -4,7 +4,7 @@ id: ENG-risk-register
 project: PRJ-002-ENG
 title: Engine 1.0 — Risk Register
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

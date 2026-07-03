@@ -9,8 +9,8 @@ budget:
   currency: USD
 dates:
   created: 2026-07-03
-  target: 2026-11-30   # proposed — confirm at review
-status: draft
+  target: 2026-11-30
+status: approved
 ---
 
 ## Objective
@@ -22,10 +22,10 @@ stability policy of its own.
 
 ## Success Criteria
 
-- Specification 1.0 published with a versioning policy and RFC-2119 conformance language throughout.
+- Specification 1.0 published by 2026-11-30, with a versioning policy and RFC-2119 conformance language throughout.
 - Conformance suite at 80 cases or more, with the reference implementation passing 100%.
-- Zero engine behaviors observable in the gates that the specification does not describe.
-- Execution mapping, risk lifecycle, and the operations kind specified normatively.
+- 0 gate-observable engine behaviors undescribed by the specification at the 1.0 release on 2026-11-30.
+- Execution mapping, risk lifecycle, and the operations kind specified normatively by 2026-10-15.
 
 ## Scope
 
@@ -48,4 +48,5 @@ engine implementation (PRJ-002-ENG) and site presentation of the standard
 
 ## Approval
 
-Draft — pending sponsor review of target date and conformance-count target.
+Approved by the sponsor, John Tanner, on 2026-07-03. Budget of USD 12,000
+and the target date above are confirmed.

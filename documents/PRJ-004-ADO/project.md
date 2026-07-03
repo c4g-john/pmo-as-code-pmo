@@ -4,7 +4,7 @@ id: PRJ-004-ADO
 code: ADO
 name: Launch and adoption
 sponsor: John Tanner
-status: proposed
+status: active
 profile: lean-startup
 ---
 

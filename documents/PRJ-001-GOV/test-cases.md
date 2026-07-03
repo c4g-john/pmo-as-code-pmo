@@ -4,7 +4,7 @@ id: GOV-test-cases
 project: PRJ-001-GOV
 title: Self-governance — Test Cases
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

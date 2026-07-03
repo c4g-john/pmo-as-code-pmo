@@ -4,7 +4,7 @@ id: OPS-risk-register
 project: PRJ-005-OPS
 title: Portfolio operations 2026-H2 — Risk Register
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

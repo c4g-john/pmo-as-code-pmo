@@ -4,7 +4,7 @@ id: GOV-prd
 project: PRJ-001-GOV
 title: Self-governance — Product Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

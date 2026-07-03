@@ -4,7 +4,7 @@ id: OPS-test-cases
 project: PRJ-005-OPS
 title: Portfolio operations 2026-H2 — Test Cases
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

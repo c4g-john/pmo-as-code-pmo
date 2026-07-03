@@ -4,7 +4,7 @@ id: ENG-prd
 project: PRJ-002-ENG
 title: Engine 1.0 — Product Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

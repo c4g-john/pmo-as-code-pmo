@@ -4,7 +4,7 @@ id: STD-risk-register
 project: PRJ-003-STD
 title: Standard 1.0 — Risk Register
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview
