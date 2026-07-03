@@ -20,3 +20,5 @@ behavior rather than code.
 - **GOV-TC-004** (tests: GOV-AC-004): Steps: approve a test story, dispatch the bridge scaffold, and inspect the target code repository. Expected: the Story exists as a sub-issue under its Feature with the bridge marker.
 - **GOV-TC-005** (tests: GOV-AC-005): Steps: edit a project anchor's name without regenerating projects.yaml and push. Expected: the registry check fails.
 - **GOV-TC-006** (tests: GOV-AC-006): Steps: export gate durations for the trailing month from the Actions API and compute the median. Expected: under 5 minutes.
+- **GOV-TC-007** (tests: GOV-AC-007): Steps: after a scaffold run, list the portfolio board's items and their field values. Expected: every Feature and Story present, each carrying its document id and project.
+- **GOV-TC-008** (tests: GOV-AC-008): Steps: close the last open story under a test Feature and wait for close-out; separately create a rogue issue in a bridged repository. Expected: the Feature closes automatically, and the rogue issue is labeled out of scope within minutes.
