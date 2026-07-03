@@ -9,8 +9,8 @@ budget:
   currency: USD
 dates:
   created: 2026-07-03
-  target: 2026-12-31   # proposed — confirm at review
-status: draft
+  target: 2026-12-31
+status: approved
 ---
 
 ## Objective
@@ -21,10 +21,10 @@ own portfolio, and the beginnings of an external adopter community.
 
 ## Success Criteria
 
-- Launch announcements published on LinkedIn and Hacker News.
+- 2 launch announcements (LinkedIn and Hacker News) published by 2026-11-15.
 - Site documents 100% of released engine features at launch, with no released feature undocumented.
 - 10 or more external adopters, measured by template forks plus action dependents.
-- First external issue or pull request received on any ecosystem repository.
+- At least 1 external issue or pull request received on an ecosystem repository by 2026-12-31.
 
 ## Scope
 
@@ -47,4 +47,5 @@ changes (their projects), and support commitments beyond OPS service levels.
 
 ## Approval
 
-Draft — pending sponsor review of adopter target and launch gate.
+Approved by the sponsor, John Tanner, on 2026-07-03. Budget of USD 12,000
+and the target date above are confirmed.

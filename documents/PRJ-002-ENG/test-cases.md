@@ -4,7 +4,7 @@ id: ENG-test-cases
 project: PRJ-002-ENG
 title: Engine 1.0 — Test Cases
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

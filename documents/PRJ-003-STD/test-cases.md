@@ -4,7 +4,7 @@ id: STD-test-cases
 project: PRJ-003-STD
 title: Standard 1.0 — Test Cases
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

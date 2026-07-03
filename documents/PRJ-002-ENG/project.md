@@ -4,7 +4,7 @@ id: PRJ-002-ENG
 code: ENG
 name: Engine 1.0
 sponsor: John Tanner
-status: proposed
+status: active
 profile: lean-startup
 ---
 

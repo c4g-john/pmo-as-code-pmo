@@ -9,8 +9,8 @@ budget:
   currency: USD
 dates:
   created: 2026-07-03
-  target: 2026-10-31   # proposed — confirm at review
-status: draft
+  target: 2026-10-31
+status: approved
 ---
 
 ## Objective
@@ -22,10 +22,10 @@ published stability and deprecation policy.
 
 ## Success Criteria
 
-- docassert 1.0 released on PyPI and Homebrew with a published semver and deprecation policy.
+- docassert 1.0 released on PyPI and Homebrew by 2026-10-31, with a published semver and deprecation policy.
 - Zero unversioned breaking changes from 1.0 onward.
 - Test coverage at or above 85% with all supported platforms green (Python 3.10–3.13 and Windows).
-- This portfolio's bridge runs entirely on released engine features, with no repo-local patches.
+- This portfolio's bridge runs entirely on released engine features by 2026-10-31, with 0 repo-local patches.
 
 ## Scope
 
@@ -48,4 +48,5 @@ post-1.0 maintenance (transfers to PRJ-005-OPS at closure).
 
 ## Approval
 
-Draft — pending sponsor review of target date and milestone sequence.
+Approved by the sponsor, John Tanner, on 2026-07-03. Budget of USD 12,000
+and the target date above are confirmed.

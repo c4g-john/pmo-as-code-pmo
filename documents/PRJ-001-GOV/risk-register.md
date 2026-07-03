@@ -4,7 +4,7 @@ id: GOV-risk-register
 project: PRJ-001-GOV
 title: Self-governance — Risk Register
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

@@ -4,7 +4,7 @@ id: ADO-prd
 project: PRJ-004-ADO
 title: Launch and adoption — Product Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

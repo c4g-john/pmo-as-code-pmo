@@ -4,7 +4,7 @@ id: ADO-brd
 project: PRJ-004-ADO
 title: Launch and adoption — Business Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Purpose

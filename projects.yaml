@@ -5,24 +5,24 @@ projects:
   code: GOV
   name: Self-governance
   sponsor: John Tanner
-  status: proposed
+  status: active
 - id: PRJ-002-ENG
   code: ENG
   name: Engine 1.0
   sponsor: John Tanner
-  status: proposed
+  status: active
 - id: PRJ-003-STD
   code: STD
   name: Standard 1.0
   sponsor: John Tanner
-  status: proposed
+  status: active
 - id: PRJ-004-ADO
   code: ADO
   name: Launch and adoption
   sponsor: John Tanner
-  status: proposed
+  status: active
 - id: PRJ-005-OPS
   code: OPS
   name: Portfolio operations 2026-H2
   sponsor: John Tanner
-  status: proposed
+  status: active

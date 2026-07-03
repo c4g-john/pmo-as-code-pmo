@@ -4,7 +4,7 @@ id: PRJ-005-OPS
 code: OPS
 name: Portfolio operations 2026-H2
 sponsor: John Tanner
-status: proposed
+status: active
 profile: lean-startup
 ---
 

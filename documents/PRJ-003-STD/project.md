@@ -4,7 +4,7 @@ id: PRJ-003-STD
 code: STD
 name: Standard 1.0
 sponsor: John Tanner
-status: proposed
+status: active
 profile: lean-startup
 ---
 

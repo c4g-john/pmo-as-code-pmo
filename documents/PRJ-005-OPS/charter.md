@@ -10,7 +10,7 @@ budget:
 dates:
   created: 2026-07-03
   target: 2026-12-31   # period end — re-charter for 2027-H1
-status: draft
+status: approved
 ---
 
 ## Objective
@@ -26,7 +26,7 @@ runbook, with keep-the-lights-on effort capped so project work stays funded.
 - Confirmed defects receive a patch release within 7 days.
 - Security advisories triaged within 48 hours; CodeQL findings at zero or dispositioned.
 - Keep-the-lights-on effort at or below 20% of capacity, reported monthly.
-- Zero credential, domain, or certificate lapses in the period.
+- 0 credential, domain, or certificate lapses through 2026-12-31.
 
 ## Scope
 
@@ -49,4 +49,5 @@ operations beyond the shared bridge schedules.
 
 ## Approval
 
-Draft — pending sponsor review of period length and service levels.
+Approved by the sponsor, John Tanner, on 2026-07-03. Budget of USD 12,000
+and the target date above are confirmed.

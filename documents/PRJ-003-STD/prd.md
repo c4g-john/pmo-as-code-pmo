@@ -4,7 +4,7 @@ id: STD-prd
 project: PRJ-003-STD
 title: Standard 1.0 — Product Requirements
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

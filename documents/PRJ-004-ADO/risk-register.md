@@ -4,7 +4,7 @@ id: ADO-risk-register
 project: PRJ-004-ADO
 title: Launch and adoption — Risk Register
 owner: johntanner
-status: draft
+status: approved
 ---
 
 ## Overview

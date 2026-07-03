@@ -4,7 +4,7 @@ id: PRJ-001-GOV
 code: GOV
 name: Self-governance
 sponsor: John Tanner
-status: proposed
+status: active
 profile: lean-startup
 ---
 

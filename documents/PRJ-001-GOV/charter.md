@@ -9,8 +9,8 @@ budget:
   currency: USD
 dates:
   created: 2026-07-03
-  target: 2026-08-31   # proposed — confirm at review
-status: draft
+  target: 2026-08-31
+status: approved
 ---
 
 ## Objective
@@ -25,7 +25,7 @@ a public derived dashboard.
 - Portfolio dashboard live on GitHub Pages, regenerated within 10 minutes of every merge to main.
 - Audit and consistency gates required on every pull request, with median CI time under 5 minutes.
 - 100% of feature pull requests merged in scope repos reference a bridge story, once the bridge is wired.
-- All five projects registered in projects.yaml with zero registry drift.
+- All 5 projects registered in projects.yaml with 0 registry-drift failures on main through 2026-08-31.
 
 ## Scope
 
@@ -49,4 +49,5 @@ documents, and any change to the Refuge for Humans repositories.
 
 ## Approval
 
-Draft — pending sponsor review of target date and success criteria numbers.
+Approved by the sponsor, John Tanner, on 2026-07-03. Budget of USD 12,000
+and the target date above are confirmed.
