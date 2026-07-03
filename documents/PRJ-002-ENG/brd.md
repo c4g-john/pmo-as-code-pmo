@@ -19,6 +19,7 @@ demanded, is what makes PMO as Code adoptable beyond its author.
 - **ENG-BR-002**: The business shall hold the engine's quality floor at 85% test coverage or higher, green on Python 3.10 through 3.13 and Windows.
 - **ENG-BR-003**: The business shall make the engine serve multi-repo portfolios, proven by this portfolio's bridge running entirely on released features.
 - **ENG-BR-004**: The business shall make ongoing operations governable, shipping an operations document kind whose status derives from service health and review freshness.
+- **ENG-BR-005**: The business shall keep derived status earnable: a governed project shall be able to reach green through recorded work, such as dispositioned risks and fresh reviews, never by deleting its records.
 
 ## Out of Scope
 

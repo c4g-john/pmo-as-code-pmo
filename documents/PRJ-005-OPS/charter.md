@@ -26,6 +26,7 @@ runbook, with keep-the-lights-on effort capped so project work stays funded.
 - Confirmed defects receive a patch release within 7 days.
 - Security advisories triaged within 48 hours; CodeQL findings at zero or dispositioned.
 - Keep-the-lights-on effort at or below 20% of capacity, reported monthly.
+- Zero credential, domain, or certificate lapses in the period.
 
 ## Scope
 

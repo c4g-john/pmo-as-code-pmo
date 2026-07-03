@@ -20,6 +20,7 @@ unaccounted.
 - **OPS-BR-002**: The business shall service defects, shipping a patch release within 7 days of confirming one.
 - **OPS-BR-003**: The business shall hold security posture, triaging advisories within 48 hours and keeping CodeQL findings at zero or dispositioned.
 - **OPS-BR-004**: The business shall bound keep-the-lights-on effort at 20% of capacity, reported monthly, so operations never silently starves project delivery.
+- **OPS-BR-005**: The business shall keep operational infrastructure alive and predictable, with zero credential, domain, or certificate lapses in the period and known transient CI failure patterns resolved by runbook rather than investigation.
 
 ## Out of Scope
 
