@@ -25,3 +25,5 @@ criteria live with the PRD.
 - **ENG-US-007** (traces: ENG-PR-003): As an adopter, I want an operations profile so that an operations-focused repository can enforce its own required document set.
 - **ENG-US-008** (traces: ENG-PR-004): As an adopter, I want a published stability and deprecation policy with the full CLI surface documented so that I can pin, upgrade, and automate without fear of silent breakage.
 - **ENG-US-009** (traces: ENG-PR-005): As a maintainer, I want continuous integration to fail below the 85% coverage floor so that the quality bar is enforced rather than aspirational.
+- **ENG-US-010** (traces: ENG-PR-006): As a portfolio maintainer, I want racing scaffold runs to converge on one issue per marker so that a dispatch racing a push trigger cannot duplicate the board.
+- **ENG-US-011** (traces: ENG-PR-006): As a portfolio maintainer, I want board field initialization to treat existing fields as success so that concurrent syncs to a shared board cannot fail each other.
