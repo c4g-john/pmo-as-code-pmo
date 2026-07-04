@@ -18,6 +18,7 @@ the launch itself, and honest adoption measurement.
 - **ADO-PR-002** (traces: ADO-BR-004; after: ADO-PR-001): A self-governance page shall present the live portfolio dashboard, the five projects, and how a reader can verify each claim in the repositories.
 - **ADO-PR-003** (traces: ADO-BR-001; after: ADO-PR-002): The launch announcements shall be published from the drafts on file, updated to the shipped feature set, only after Engine 1.0 is released.
 - **ADO-PR-004** (traces: ADO-BR-003): The adopter count shall be produced monthly from template forks and action dependents, recorded in a status report, with the method documented on the site.
+- **ADO-PR-006** (traces: ADO-BR-001; after: ADO-PR-003): A public press and share kit page shall present a fact sheet, boilerplate descriptions, story angles, brand assets, contact details, and the announcement texts, with every factual claim verifiable against shipped artifacts; internal handoff drafts shall not be served on the public site.
 - **ADO-PR-005** (traces: ADO-BR-003): The template's adopter experience shall be exercised end to end quarterly: a fresh copy reaches a green gate and a live dashboard using only the README.
 
 ## Acceptance Criteria
@@ -27,6 +28,7 @@ the launch itself, and honest adoption measurement.
 - **ADO-AC-003** (verifies: ADO-PR-003): Given Engine 1.0 on PyPI, when the announcements publish, then every feature claim in them matches the released engine.
 - **ADO-AC-004** (verifies: ADO-PR-004): Given a month end, when the adopter count is recorded, then forks and dependents are separately stated with retrieval dates.
 - **ADO-AC-005** (verifies: ADO-PR-005): Given a fresh template copy and only the README, when setup is followed, then audit and consistency gate a test pull request and the dashboard deploys.
+- **ADO-AC-006** (verifies: ADO-PR-006): Given the published press page, when each factual claim is checked, then it matches a shipped artifact (release, spec tag, or live dashboard), and no internal handoff draft resolves on the public site.
 
 ## Out of Scope
 
