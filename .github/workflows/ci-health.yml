@@ -39,6 +39,15 @@ jobs:
                     + " ([run](" + .html_url + "))"' 2>/dev/null || true)
             [ -n "$rows" ] && failures="$failures$rows"$'\n'
           done
+          latest=$(curl -s https://pypi.org/pypi/docassert/json | python3 -c 'import json,sys; print(json.load(sys.stdin)["info"]["version"])' 2>/dev/null || echo "")
+          if [ -n "$latest" ]; then
+            for r in pmo-as-code-pmo refuge-for-humans-pmo pmo-as-code-pipeline pmo-as-code-spec; do
+              pin=$(gh api "repos/c4g-john/$r/contents/.docassert-version" -H "Accept: application/vnd.github.raw" 2>/dev/null | head -n1 | tr -d '[:space:]')
+              if [ -n "$pin" ] && [ "$pin" != "$latest" ]; then
+                failures="$failures- **$r**: pin $pin trails latest $latest (stale-pin / drift-guard-vacuity class)"$'\n'
+              fi
+            done
+          fi
           title="CI health: failures detected"
           existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
             --search "in:title \"$title\"" --json number -q '.[0].number')
