@@ -43,10 +43,7 @@ jobs:
           existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
             --search "in:title \"$title\"" --json number -q '.[0].number')
           if [ -n "$failures" ]; then
-            body="The latest completed run of these workflows is not green:
-
-$failures
-_Maintained by the ci-health sentinel (every 30 minutes). This issue closes itself when the fleet is green. Transient Pages flakes self-retry once before appearing here._"
+            body=$(printf 'The latest completed run of these workflows is not green:\n\n%s\n_Maintained by the ci-health sentinel (every 30 minutes). This issue closes itself when the fleet is green. Transient Pages flakes self-retry once before appearing here._' "$failures")
             if [ -n "$existing" ]; then
               gh issue edit "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
               echo "updated #$existing"
