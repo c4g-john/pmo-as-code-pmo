@@ -18,7 +18,7 @@ to adopters, applied to ourselves.
 - **GOV-PR-001** (traces: GOV-BR-001): The documents repository shall hold one folder per project with the full lean-startup document set, and audit plus consistency shall be required status checks on every pull request.
 - **GOV-PR-002** (traces: GOV-BR-002): The status dashboard shall deploy to GitHub Pages on every push to main, with a portfolio index and one page per project.
 - **GOV-PR-003** (traces: GOV-BR-001): The advisory alignment layer shall run with the key passed only when documents change, with the grading cache persisted between runs.
-- **GOV-PR-004** (traces: GOV-BR-003): Each project shall be bridged to its component code repository across the full lifecycle: Features and Stories scaffolded from approved user stories, mirrored to a portfolio board with their document ids, Features closing when their last story completes, and issues outside documented scope flagged.
+- **GOV-PR-004** (traces: GOV-BR-003; after: GOV-PR-001): Each project shall be bridged to its component code repository across the full lifecycle: Features and Stories scaffolded from approved user stories, mirrored to a portfolio board with their document ids, Features closing when their last story completes, and issues outside documented scope flagged.
 - **GOV-PR-005** (traces: GOV-BR-001): The project registry shall be regenerated and checked for drift as a blocking gate.
 - **GOV-PR-006** (traces: GOV-BR-004): Gate workflows shall complete in under 5 minutes median, measured over the trailing month of pull requests.
 
