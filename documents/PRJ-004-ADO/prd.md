@@ -15,8 +15,8 @@ the launch itself, and honest adoption measurement.
 ## Product Requirements
 
 - **ADO-PR-001** (traces: ADO-BR-002): The site shall document every released engine feature, including the advisory cache budget, per-relation rubrics, the risk table, and the operations kind when it ships.
-- **ADO-PR-002** (traces: ADO-BR-004): A self-governance page shall present the live portfolio dashboard, the five projects, and how a reader can verify each claim in the repositories.
-- **ADO-PR-003** (traces: ADO-BR-001): The launch announcements shall be published from the drafts on file, updated to the shipped feature set, only after Engine 1.0 is released.
+- **ADO-PR-002** (traces: ADO-BR-004; after: ADO-PR-001): A self-governance page shall present the live portfolio dashboard, the five projects, and how a reader can verify each claim in the repositories.
+- **ADO-PR-003** (traces: ADO-BR-001; after: ADO-PR-002): The launch announcements shall be published from the drafts on file, updated to the shipped feature set, only after Engine 1.0 is released.
 - **ADO-PR-004** (traces: ADO-BR-003): The adopter count shall be produced monthly from template forks and action dependents, recorded in a status report, with the method documented on the site.
 - **ADO-PR-005** (traces: ADO-BR-003): The template's adopter experience shall be exercised end to end quarterly: a fresh copy reaches a green gate and a live dashboard using only the README.
 
