@@ -27,3 +27,8 @@ criteria live with the PRD.
 - **ENG-US-009** (traces: ENG-PR-005): As a maintainer, I want continuous integration to fail below the 85% coverage floor so that the quality bar is enforced rather than aspirational.
 - **ENG-US-010** (traces: ENG-PR-006): As a portfolio maintainer, I want racing scaffold runs to converge on one issue per marker so that a dispatch racing a push trigger cannot duplicate the board.
 - **ENG-US-011** (traces: ENG-PR-006): As a portfolio maintainer, I want board field initialization to treat existing fields as success so that concurrent syncs to a shared board cannot fail each other.
+- **ENG-US-012** (traces: ENG-PR-007): As a sponsor, I want the project page to open with a verdict and stat cluster composed from the real status causes so that the first screen answers whether I should worry.
+- **ENG-US-013** (traces: ENG-PR-007): As a sponsor, I want milestone timelines and execution lanes drawn from dated charter milestones and real issue lifetimes so that schedule truth comes from records, not estimates.
+- **ENG-US-014** (traces: ENG-PR-007): As a reader, I want the risk register as an interactive heat matrix and expandable table so that I can isolate what threatens what without leaving the page.
+- **ENG-US-015** (traces: ENG-PR-007): As a reader, I want document, work, and activity views with filters so that one page carries the whole project story from scope to delivery.
+- **ENG-US-016** (traces: ENG-PR-007): As a portfolio sponsor, I want the index redesigned as a health-distribution overview with filterable project rows so that portfolio triage starts at the worst news.
