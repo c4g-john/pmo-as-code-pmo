@@ -31,12 +31,18 @@ jobs:
       - name: Scaffold GOV and OPS into this repository
         env:
           GH_TOKEN: ${{ github.token }}
+          PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+          PROJECT_NUMBER: ${{ vars.BRIDGE_PROJECT_NUMBER }}
         run: |
-          docassert bridge scaffold \
-            --repo "$GITHUB_REPOSITORY" \
-            --project PRJ-001-GOV \
-            --docs-url "https://github.com/$GITHUB_REPOSITORY/blob/main"
-          docassert bridge scaffold \
-            --repo "$GITHUB_REPOSITORY" \
-            --project PRJ-005-OPS \
-            --docs-url "https://github.com/$GITHUB_REPOSITORY/blob/main"
+          extra=""
+          if [ -n "$PROJECT_NUMBER" ] && [ -n "$PROJECTS_TOKEN" ]; then
+            extra="--project-owner c4g-john --project-number $PROJECT_NUMBER --init-board"
+          fi
+          for prj in PRJ-001-GOV PRJ-005-OPS; do
+            # shellcheck disable=SC2086
+            docassert bridge scaffold \
+              --repo "$GITHUB_REPOSITORY" \
+              --project "$prj" \
+              --docs-url "https://github.com/$GITHUB_REPOSITORY/blob/main" \
+              $extra
+          done
