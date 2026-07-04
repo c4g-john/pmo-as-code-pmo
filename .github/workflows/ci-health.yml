@@ -1,0 +1,62 @@
+name: ci health sentinel
+
+# Sweeps the latest completed run of every workflow across the ecosystem and
+# maintains exactly one "CI health" issue here: opened/updated while anything
+# is red, closed when the fleet is green. Answers "why did a human have to
+# notice?" — they shouldn't.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: ci-health
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sweep latest run per workflow across all repos
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOS: >-
+            pmo-as-code-pmo refuge-for-humans-pmo refuge-for-humans-app
+            pmo-as-code-pipeline pmo-as-code-template pmo-as-code
+            docassert pmo-as-code-spec docassert-action homebrew-tap
+        run: |
+          failures=""
+          for r in $REPOS; do
+            rows=$(gh api "repos/c4g-john/$r/actions/runs?per_page=50&status=completed" \
+              -q '[.workflow_runs | group_by(.workflow_id)[] | max_by(.run_number)]
+                  | .[] | select(.conclusion != "success" and .conclusion != "skipped"
+                                 and .conclusion != "cancelled")
+                  | "- **" + .repository.name + "** / " + .name + ": " + .conclusion
+                    + " ([run](" + .html_url + "))"' 2>/dev/null || true)
+            [ -n "$rows" ] && failures="$failures$rows"$'\n'
+          done
+          title="CI health: failures detected"
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
+            --search "in:title \"$title\"" --json number -q '.[0].number')
+          if [ -n "$failures" ]; then
+            body=$(printf 'The latest completed run of these workflows is not green:\n\n%s\n_Maintained by the ci-health sentinel (every 30 minutes). This issue closes itself when the fleet is green. Transient Pages flakes self-retry once before appearing here._' "$failures")
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
+              echo "updated #$existing"
+            else
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+            fi
+            echo "$failures"
+            exit 0
+          fi
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" --repo "$GITHUB_REPOSITORY" \
+              --comment "Fleet is green; closing."
+            echo "closed #$existing"
+          else
+            echo "fleet green"
+          fi
