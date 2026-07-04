@@ -21,6 +21,7 @@ exposed the missing operations kind.
 - **ENG-PR-003** (traces: ENG-BR-004): An operations document kind and profile shall exist, with a service catalog, service-level objectives, and a mandatory review-by date; a stale review shall turn the derived status amber.
 - **ENG-PR-004** (traces: ENG-BR-001): The public CLI surface shall be documented, and a stability policy shall define what 1.x guarantees and how deprecations are announced.
 - **ENG-PR-005** (traces: ENG-BR-002): Continuous integration shall enforce a coverage floor of 85% and keep the full platform matrix green.
+- **ENG-PR-006** (traces: ENG-BR-003): Bridge mutations shall be safe under concurrent runs: scaffolding shall converge on exactly one issue per marker even when runs race, and board field initialization shall treat an already-existing field as success.
 
 ## Acceptance Criteria
 
@@ -29,6 +30,7 @@ exposed the missing operations kind.
 - **ENG-AC-003** (verifies: ENG-PR-003): Given an operations document whose review-by date has passed, when status derives, then the project shows amber with the stale review named as the cause.
 - **ENG-AC-004** (verifies: ENG-PR-004): Given the 1.0 release, when its documentation is read, then every public command and flag is described and the deprecation policy is stated.
 - **ENG-AC-005** (verifies: ENG-PR-005): Given a change that drops coverage below 85%, when CI runs, then the build fails.
+- **ENG-AC-006** (verifies: ENG-PR-006): Given two scaffold runs racing over the same repository, when both complete, then exactly one open issue exists per bridge marker; and given field initialization against a board whose fields already exist, when it runs, then it succeeds without error.
 
 ## Out of Scope
 
