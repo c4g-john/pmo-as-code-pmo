@@ -29,6 +29,7 @@ the launch itself, and honest adoption measurement.
 - **ADO-AC-004** (verifies: ADO-PR-004): Given a month end, when the adopter count is recorded, then forks and dependents are separately stated with retrieval dates.
 - **ADO-AC-005** (verifies: ADO-PR-005): Given a fresh template copy and only the README, when setup is followed, then audit and consistency gate a test pull request and the dashboard deploys.
 - **ADO-AC-006** (verifies: ADO-PR-006): Given the published press page, when each factual claim is checked, then it matches a shipped artifact (release, spec tag, or live dashboard), and no internal handoff draft resolves on the public site.
+- **ADO-AC-007** (verifies: ADO-PR-006): Given the published press page, when a journalist uses it, then every visual asset is previewed on the page itself, prose copy renders wrapped with a one-click copy, and each announcement is presented in the form of its destination.
 
 ## Out of Scope
 
