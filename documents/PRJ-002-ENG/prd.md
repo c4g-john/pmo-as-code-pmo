@@ -22,7 +22,7 @@ exposed the missing operations kind.
 - **ENG-PR-004** (traces: ENG-BR-001): The public CLI surface shall be documented, and a stability policy shall define what 1.x guarantees and how deprecations are announced.
 - **ENG-PR-005** (traces: ENG-BR-002): Continuous integration shall enforce a coverage floor of 85% and keep the full platform matrix green.
 - **ENG-PR-006** (traces: ENG-BR-003): Bridge mutations shall be safe under concurrent runs: scaffolding shall converge on exactly one issue per marker even when runs race, and board field initialization shall treat an already-existing field as success.
-- **ENG-PR-007** (traces: ENG-BR-005): Status pages shall present the derived model as a decision-grade dashboard: a verdict composed deterministically from the actual status causes, milestone timelines from dated charter milestones and the operations review, execution work and lifetime lanes from real bridge issue dates and states, recent document activity from the repository history, and an interactive risk view — with every element derived from recorded data and nothing invented.
+- **ENG-PR-007** (traces: ENG-BR-005): Status pages shall present the derived model as a decision-grade dashboard: a verdict composed deterministically from the actual status causes, milestone timelines from dated charter milestones and the operations review, execution work views from real bridge issue states, with features charted by dependency sequence and scope size (stories plus acceptance criteria) rather than a time axis, recent document activity from the repository history, and an interactive risk view — with every element derived from recorded data and nothing invented.
 
 ## Acceptance Criteria
 
@@ -34,7 +34,9 @@ exposed the missing operations kind.
 - **ENG-AC-006** (verifies: ENG-PR-006): Given two scaffold runs racing over the same repository, when both complete, then exactly one open issue exists per bridge marker; and given field initialization against a board whose fields already exist, when it runs, then it succeeds without error.
 - **ENG-AC-007** (verifies: ENG-PR-007): Given a project page, when its verdict, stats, timeline, gantt lanes, and activity are compared to the model, then each traces to a recorded source (documents, bridge issues, or repository history) with no unsourced value.
 - **ENG-AC-008** (verifies: ENG-PR-007): Given a charter milestone bullet ending in an ISO date, when status derives, then the milestone appears on the timeline with its temporal state (elapsed, today, or upcoming with a day count), and a past date is never presented as completion.
-- **ENG-AC-009** (verifies: ENG-PR-007): Given bridge execution data with issue states and dates, when the page renders, then work rows and lanes show real titles, real states, and real created-to-closed spans, and the presentation never feeds back into the derived RAG.
+- **ENG-AC-009** (verifies: ENG-PR-007): Given bridge execution data with issue states, when the page renders, then work rows show real titles and states, and the presentation never feeds back into the derived RAG.
+- **ENG-AC-010** (verifies: ENG-PR-007): Given features with `after` links and traced stories and criteria, when the sequence chart renders, then position reflects the dependency layers, width reflects scope points (stories plus acceptance criteria, formula in the legend), and no axis anywhere on the chart denotes time.
+- **ENG-AC-011** (verifies: ENG-PR-007): Given an `after` cycle among product requirements, when consistency runs, then the sequence-acyclic check fails as blocking.
 
 ## Out of Scope
 
