@@ -57,6 +57,12 @@ jobs:
                 failures="$failures- **$r**: pin $pin trails latest $latest (stale-pin / drift-guard-vacuity class)"$'\n'
               fi
             done
+            formula=$(gh api "repos/c4g-john/homebrew-tap/contents/Formula/docassert.rb" -H "Accept: application/vnd.github.raw" 2>/dev/null | grep -oE 'docassert-[0-9.]+\.tar\.gz' | head -n1 | sed 's/docassert-//;s/\.tar\.gz//')
+            if [ -z "$formula" ]; then
+              failures="$failures- **homebrew-tap**: formula version unreadable — freshness monitoring is blind (vacuity class)"$'\n'
+            elif [ "$formula" != "$latest" ]; then
+              failures="$failures- **homebrew-tap**: formula $formula trails latest $latest (stale-formula class)"$'\n'
+            fi
           fi
           title="CI health: failures detected"
           existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
