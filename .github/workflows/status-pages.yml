@@ -34,8 +34,19 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "docassert==$(head -n1 .docassert-version)"
+      - name: Read delivery facts from the bridges (read-only, anchor-routed)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          docassert bridge status --json --out execution.json \
+            || echo "(bridge unavailable; building without execution facts)"
       - name: Build the status site
-        run: docassert pages --out _site
+        run: |
+          if [ -s execution.json ]; then
+            docassert pages --out _site --execution execution.json
+          else
+            docassert pages --out _site
+          fi
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
