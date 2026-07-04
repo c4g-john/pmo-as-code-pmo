@@ -1,0 +1,25 @@
+name: bridge board init (one-time)
+
+# Creates the portfolio's Projects v2 board with the PROJECTS_TOKEN secret
+# (classic PAT, project scope). Run once; then set BRIDGE_PROJECT_NUMBER on
+# every bridged repo and the scaffolds keep it in sync.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+      - run: pip install "docassert==$(head -n1 .docassert-version)"
+      - name: Create the portfolio board
+        env:
+          PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+        run: |
+          docassert bridge create-board --title "PMO as Code" --repo "$GITHUB_REPOSITORY"
