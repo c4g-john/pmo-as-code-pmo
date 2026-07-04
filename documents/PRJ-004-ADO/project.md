@@ -12,7 +12,7 @@ profile: lean-startup
 ## Overview
 
 Take PMO as Code public: bring the site to feature parity with the released
-engine, publish the launch announcements drafted and held since the spring,
+engine, publish the launch announcements through a public press and share kit,
 show the portfolio governing itself, and win the first external adopters.
 Gated on Engine 1.0 so the launch points at a stable target.
 
