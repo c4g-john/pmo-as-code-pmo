@@ -32,3 +32,5 @@ criteria live with the PRD.
 - **ENG-US-014** (traces: ENG-PR-007): As a reader, I want the risk register as an interactive heat matrix and expandable table so that I can isolate what threatens what without leaving the page.
 - **ENG-US-015** (traces: ENG-PR-007): As a reader, I want document, work, and activity views with filters so that one page carries the whole project story from scope to delivery.
 - **ENG-US-016** (traces: ENG-PR-007): As a portfolio sponsor, I want the index redesigned as a health-distribution overview with filterable project rows so that portfolio triage starts at the worst news.
+- **ENG-US-017** (traces: ENG-PR-007): As a sponsor, I want features charted by dependency sequence and scope size instead of a time axis so that the picture stays truthful when delivery moves faster than calendars.
+- **ENG-US-018** (traces: ENG-PR-007): As a document author, I want an `after` relation on product requirements with an acyclic gate so that sequencing is scope I write, not a date someone guesses.
