@@ -20,3 +20,4 @@ release timestamps, and the monthly reports.
 - **OPS-TC-004** (tests: OPS-AC-004): Steps: walk the lifecycle inventory, checking each renewal date against today. Expected: no asset past due or unscheduled.
 - **OPS-TC-005** (tests: OPS-AC-005): Steps: open the latest monthly status report. Expected: service levels, effort percentage against the 20% cap, and spend against the 12,000 USD envelope are stated.
 - **OPS-TC-006** (tests: OPS-AC-006): Steps: on the next PyPI propagation failure in CI, follow the runbook entry. Expected: resolved by re-dispatch without investigation.
+- **OPS-TC-007** (tests: OPS-AC-007): Steps: observe a real workflow failure (or dispatch one against a scratch branch), wait one sweep interval, read the alert issue, resolve the failure, and wait one more sweep. Expected: the issue named the failure with a run link and closed itself after the fix.

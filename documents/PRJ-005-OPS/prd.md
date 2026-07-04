@@ -20,6 +20,7 @@ operations document kind ships and this project migrates to it.
 - **OPS-PR-004** (traces: OPS-BR-005): A credential and domain lifecycle inventory shall list every expiring asset (domain, tokens, API keys, Pages certificates) with renewal dates and runbook steps.
 - **OPS-PR-005** (traces: OPS-BR-004): A monthly operations status report shall record service-level attainment, keep-the-lights-on effort against the 20% cap, and period spend against budget.
 - **OPS-PR-006** (traces: OPS-BR-005): Known transient CI failure patterns (PyPI propagation lag, Pages deployment flakes) shall have runbook entries with detection and response steps.
+- **OPS-PR-007** (traces: OPS-BR-005): CI failures shall surface without human vigilance: known transient classes shall retry themselves once, and a sentinel shall sweep every repository's latest workflow conclusions at least twice hourly, maintaining a single self-closing alert issue while anything is red.
 
 ## Acceptance Criteria
 
@@ -29,6 +30,7 @@ operations document kind ships and this project migrates to it.
 - **OPS-AC-004** (verifies: OPS-PR-004): Given the lifecycle inventory, when each asset's renewal date is checked, then none expires without a scheduled renewal step.
 - **OPS-AC-005** (verifies: OPS-PR-005): Given each month end, when the status report is read, then service levels, effort against cap, and spend are all stated.
 - **OPS-AC-006** (verifies: OPS-PR-006): Given a recurrence of a known CI failure pattern, when the runbook is followed, then the pattern resolves without debugging.
+- **OPS-AC-007** (verifies: OPS-PR-007): Given a workflow whose latest completed run failed anywhere in the ecosystem, when the next sweep runs, then the alert issue exists and names it; and given a fleet with no such failures, when the sweep runs, then the alert issue is closed.
 
 ## Out of Scope
 

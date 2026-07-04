@@ -21,3 +21,4 @@ end with the ops review. Acceptance criteria live with the PRD.
 - **OPS-US-004** (traces: OPS-PR-004): As an operator, I want a renewal inventory covering every expiring asset so that no domain, token, or certificate lapses by surprise.
 - **OPS-US-005** (traces: OPS-PR-005): As a sponsor, I want a monthly operations report stating service levels, effort against the 20% cap, and spend so that keep-the-lights-on stays bounded and visible.
 - **OPS-US-006** (traces: OPS-PR-006): As an operator, I want runbook entries for known transient CI failure patterns so that a flake costs one dispatch instead of an investigation.
+- **OPS-US-007** (traces: OPS-PR-007): As a sponsor, I want CI failures to surface themselves in one self-closing alert so that I am never the monitoring system for my own delivery infrastructure.
