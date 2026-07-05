@@ -6,7 +6,12 @@ name: ci health sentinel
 # notice?" — they shouldn't.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/30 * * * *"   # best-effort: GitHub delivers this every 1-4h in practice
+  # Event-driven detection: state changes in this repo trigger a sweep the
+  # moment they land, instead of waiting out GitHub's cron lag.
+  workflow_run:
+    workflows: ["bridge reconcile (GOV + OPS)", "status dashboard", "docassert audit", "bump docassert"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -72,7 +77,7 @@ jobs:
           existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
             --search "in:title \"$title\"" --json number -q '.[0].number')
           if [ -n "$failures" ]; then
-            body=$(printf 'The latest completed run of these workflows is not green:\n\n%s\n_Maintained by the ci-health sentinel (every 30 minutes). This issue closes itself when the fleet is green. Transient Pages flakes self-retry once before appearing here._' "$failures")
+            body=$(printf 'The latest completed run of these workflows is not green:\n\n%s\n_Maintained by the ci-health sentinel: swept after every workflow completion in this repository, plus a scheduled sweep (GitHub delivers the schedule every one to four hours in practice). This issue closes itself when the fleet is green._' "$failures")
             if [ -n "$existing" ]; then
               gh issue edit "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
               echo "updated #$existing"
