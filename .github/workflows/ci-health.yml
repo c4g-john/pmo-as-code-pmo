@@ -64,6 +64,10 @@ jobs:
               failures="$failures- **homebrew-tap**: formula $formula trails latest $latest (stale-formula class)"$'\n'
             fi
           fi
+          # The sentinel's issue is operational, not scope: label it exempt
+          # (spec v0.8.1) so the bridge scope guard never flags it.
+          gh label create "scope:exempt" --repo "$GITHUB_REPOSITORY" \
+            --color "6e7781" --description "Excluded from bridge scope classification (spec v0.8.1); human-applied only" 2>/dev/null || true
           title="CI health: failures detected"
           existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
             --search "in:title \"$title\"" --json number -q '.[0].number')
@@ -73,7 +77,7 @@ jobs:
               gh issue edit "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
               echo "updated #$existing"
             else
-              gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body" --label "scope:exempt"
             fi
             echo "$failures"
             exit 0
