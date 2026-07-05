@@ -35,6 +35,7 @@ changes (their projects), and support commitments beyond OPS service levels.
 
 ## Milestones
 
+- Site rewrite live (static, flat URLs, guidelines-clean): 2026-08-31.
 - Site at feature parity with the released engine: 2026-09-30.
 - Self-governance showcase live: 2026-10-15.
 - Launch (gated on Engine 1.0): 2026-11-15.
