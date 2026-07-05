@@ -31,11 +31,17 @@ read access to PyPI. Repository list and pins live in each repo's
 
 ### GitHub Pages deployment failure ("Deployment failed, try again later")
 
+Root cause on this fleet (diagnosed 2026-07-05): simultaneous pushes from
+fleet-wide merges made sibling repositories create Pages deployments in the
+same second, and deployment creation is not retried by the deploy action.
+Roughly one deploy in five collided. Resolution is automated at three levels;
+no manual re-dispatch is part of this procedure.
+
 1. Confirm the build steps succeeded and only the deploy step failed.
-2. Note that the deploy retries itself once via the retry-on-flake job; only proceed if attempt two also failed.
-3. Re-dispatch the workflow: `gh workflow run status-pages.yml --repo <repo>`.
-4. On a newly Pages-enabled repository, expect a settling window: deploys may fail opaquely for up to an hour; re-dispatch after it.
-5. If failures persist beyond an hour on an established site, check https://www.githubstatus.com and open a support ticket with the deployment IDs.
+2. In-run convergence: the workflow tolerates the first deploy attempt, sleeps a jittered 30 to 120 seconds to desynchronize the herd, and makes an authoritative second attempt. Check whether `deploy-again` succeeded.
+3. Run-level convergence: the `deploy retry` workflow (workflow_run) reruns a failed run once after completion.
+4. Level convergence: staggered schedules (pmo :11, refuge :31, pipeline :51, every two hours) rebuild the dashboard from HEAD regardless of push outcomes, so a failed deploy self-corrects within two hours with no action.
+5. Only if the same repository stays red across two consecutive scheduled rebuilds: check https://www.githubstatus.com and open a support ticket with the deployment IDs. That situation has not yet been observed.
 
 ### Merge refused with green checks (base branch policy)
 
