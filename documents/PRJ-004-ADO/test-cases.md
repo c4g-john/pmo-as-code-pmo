@@ -15,7 +15,7 @@ Verification for launch readiness and the adoption loop.
 
 - **ADO-TC-001** (tests: ADO-AC-001): Steps: list features from the engine changelog since 0.10, search the site for each. Expected: every feature has a documenting section.
 - **ADO-TC-002** (tests: ADO-AC-002): Steps: open the self-governance page and follow every link. Expected: dashboard, five project pages, and the documents repository load and show current content.
-- **ADO-TC-003** (tests: ADO-AC-003): Steps: diff every feature claim in the final announcement texts against the 1.0 changelog. Expected: no claim without a shipped feature.
+- **ADO-TC-003** (tests: ADO-AC-003): Steps: diff every feature claim in the published press release against the 1.0 changelog. Expected: no claim without a shipped feature.
 - **ADO-TC-004** (tests: ADO-AC-004): Steps: at month end, capture template forks and action dependents with dates and record the status report. Expected: both figures present with retrieval dates and method link.
 - **ADO-TC-005** (tests: ADO-AC-005): Steps: create a repository from the template, follow only the README, open a test pull request with a broken link, then fix it. Expected: the gate blocks then passes, and the dashboard deploys.
 - **ADO-TC-006** (tests: ADO-AC-006): Steps: open /press/, diff every number and version against the live release, spec tag, and dashboards; request each former /handoff/ path. Expected: all claims match shipped artifacts; the handoff paths return 404.

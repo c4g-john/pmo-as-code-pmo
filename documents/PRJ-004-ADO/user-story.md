@@ -17,7 +17,7 @@ with the PRD.
 
 - **ADO-US-001** (traces: ADO-PR-001): As a prospective adopter, I want every released engine feature documented on the site so that evaluating PMO as Code never requires reading source code.
 - **ADO-US-002** (traces: ADO-PR-002): As a skeptical reader, I want a self-governance page linking the live portfolio dashboard so that every claim on the site is verifiable within two clicks.
-- **ADO-US-003** (traces: ADO-PR-003): As a sponsor, I want the launch announcements published once the engine reaches 1.0 so that the public story lands on a stable target.
+- **ADO-US-003** (traces: ADO-PR-003): As a sponsor, I want the launch announcement published as a press release once the engine reaches 1.0 so that the public story lands on a stable target.
 - **ADO-US-004** (traces: ADO-PR-004): As a sponsor, I want a documented monthly adopter count from forks and dependents so that adoption is measured honestly instead of estimated.
 - **ADO-US-007** (traces: ADO-PR-007): As a maintainer, I want prose as Markdown and repeatable content as typed data so that editing a fact once updates every surface that states it.
 - **ADO-US-008** (traces: ADO-PR-008): As a reader arriving from any old link, I want the URL to still resolve so that shared links and citations never rot.
