@@ -60,6 +60,21 @@ no manual re-dispatch is part of this procedure.
 1. Note that scaffolds converge automatically since docassert 0.14.1, closing higher-numbered duplicates per marker, and that workflow concurrency guards serialize runs.
 2. If duplicates persist, run one manual scaffold dispatch and read its convergence log lines.
 
+## Renewal Inventory
+
+Every expiring asset, walked at each monthly operations report (OPS-SVC-004).
+Dates are recorded facts; "unrecorded" means the owner must confirm and fill
+the date, never guess it.
+
+| Asset | Kind | Where it lives | Scope | Expires | Renewal action |
+|---|---|---|---|---|---|
+| DISPATCH_TOKEN | Fine-grained PAT | Secret on pmo-as-code-pmo, refuge-for-humans-pmo | Actions read/write on docassert, pmo-as-code-spec, pmo-as-code, refuge-for-humans-app | 2026-10-03 | Re-mint fine-grained PAT, same four repos, Actions RW; `gh secret set DISPATCH_TOKEN` on both senders |
+| BUMP_TOKEN | Classic PAT (repo) | Secret on pmo-as-code-pmo, refuge-for-humans-pmo, pmo-as-code-pipeline, pmo-as-code-spec, homebrew-tap | repo scope, account-wide | unrecorded | Re-mint classic PAT repo scope; `gh secret set BUMP_TOKEN` on all five |
+| PROJECTS_TOKEN | Classic PAT (project) | Secret on bridge-board repos | project scope | unrecorded | Re-mint classic PAT project scope; reset secret |
+| ANTHROPIC_API_KEY | API key | Secret on repos running advisory checks | Anthropic API | does not expire | Rotate on suspicion; no scheduled renewal |
+| pmoascode.com | Domain | Registrar | public site | unrecorded | Confirm auto-renew and card on file |
+| docassert.com | Domain | Registrar | tool site | unrecorded | Confirm auto-renew and card on file |
+
 ## Monitoring
 
 The ci-health sentinel sweeps every repository's latest workflow conclusions
