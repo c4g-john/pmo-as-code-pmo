@@ -16,7 +16,7 @@ the launch itself, and honest adoption measurement.
 
 - **ADO-PR-001** (traces: ADO-BR-002): The site shall document every released engine feature, including the advisory cache budget, per-relation rubrics, the risk table, and the operations kind when it ships.
 - **ADO-PR-002** (traces: ADO-BR-004; after: ADO-PR-001): A self-governance page shall present the live portfolio dashboard, the five projects, and how a reader can verify each claim in the repositories.
-- **ADO-PR-003** (traces: ADO-BR-001; after: ADO-PR-002): The launch announcements shall be published from the drafts on file, updated to the shipped feature set, only after Engine 1.0 is released.
+- **ADO-PR-003** (traces: ADO-BR-001; after: ADO-PR-002): The launch announcement shall be published as a press release on the site's news feed, updated to the shipped feature set, only after Engine 1.0 is released.
 - **ADO-PR-004** (traces: ADO-BR-003): The adopter count shall be produced monthly from template forks and action dependents, recorded in a status report, with the method documented on the site.
 - **ADO-PR-007** (traces: ADO-BR-002): The site shall be rebuilt as a fully static multi-page site on Astro: prose pages authored as Markdown with schema-validated frontmatter, repeatable content (document kinds, profiles, proof links, fact-sheet entries) as typed data collections feeding page, JSON-LD, sitemap, and llms.txt from one record, and zero client-side JavaScript by default, with any interactive island justified in its pull request.
 - **ADO-PR-008** (traces: ADO-BR-002; after: ADO-PR-007): Every page shall live at a real flat path with no fragment routing, every pre-rewrite URL shall keep resolving through permanent redirects, and every section heading shall carry a stable linkable anchor.
@@ -29,7 +29,7 @@ the launch itself, and honest adoption measurement.
 
 - **ADO-AC-001** (verifies: ADO-PR-001): Given the engine changelog at launch, when each released feature is searched on the site, then a documenting page exists for every one.
 - **ADO-AC-002** (verifies: ADO-PR-002): Given the self-governance page, when a reader follows its links, then the live dashboard, the five project pages, and this repository are all reachable and current.
-- **ADO-AC-003** (verifies: ADO-PR-003): Given Engine 1.0 on PyPI, when the announcements publish, then every feature claim in them matches the released engine.
+- **ADO-AC-003** (verifies: ADO-PR-003): Given Engine 1.0 on PyPI, when the press release publishes, then every feature claim in it matches the released engine.
 - **ADO-AC-004** (verifies: ADO-PR-004): Given a month end, when the adopter count is recorded, then forks and dependents are separately stated with retrieval dates.
 - **ADO-AC-005** (verifies: ADO-PR-005): Given a fresh template copy and only the README, when setup is followed, then audit and consistency gate a test pull request and the dashboard deploys.
 - **ADO-AC-008** (verifies: ADO-PR-007): Given the built site, when its output is inspected, then every page is static HTML from Markdown or data-collection sources, and pages shipping JavaScript each cite a justification in the merged pull request.
