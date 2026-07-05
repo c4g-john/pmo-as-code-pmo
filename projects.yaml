@@ -10,7 +10,7 @@ projects:
   code: ENG
   name: Engine 1.0
   sponsor: John Tanner
-  status: active
+  status: closed
 - id: PRJ-003-STD
   code: STD
   name: Standard 1.0
