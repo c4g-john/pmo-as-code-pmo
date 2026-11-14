@@ -7,8 +7,8 @@ on:
   push:
     branches: [main]
     paths: ["documents/**"]
-  schedule:
-    - cron: "17 9 * * *"
+  repository_dispatch:
+    types: [bridge-scaffold]
   workflow_dispatch:
 
 concurrency:
